@@ -10,7 +10,7 @@
     <img src="icon.png" width="100px"/> <br> 
 
 <table>
-    <form method = "post" action="#">
+    <form method = "post" action="home.php">
 
     <input type="text" name="username" placeholder="Username"><br>
     <input type="password" name="password" placeholder="Password"><br>
