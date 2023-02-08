@@ -1,7 +1,6 @@
 #main{
  width: 500px;
  height: 500px;
- border: 1px solid black; 
  margin: 0 auto;
  text-align: center;
  border-radius: 50%; 
@@ -17,4 +16,6 @@ button{
     background-color: blue;
     color: white; 
     padding: 12px 18px; 
+    margin: 10px 0; 
+    border-radius: 10px; 
 }
