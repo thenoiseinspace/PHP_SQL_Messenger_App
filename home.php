@@ -8,9 +8,15 @@
          <div id="userinfo">
         userinfo</div>
         <div id="msgscreen">
+            msgscreen
     </div>
     <div id="msgbox">
-        msgbox</div>
+        <form method="post" action="#">
+            <textarea name="message" col="10" rows="4"></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
 
 
 </div>
