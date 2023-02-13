@@ -1,6 +1,7 @@
 <?php
 $dbname="messenger";
-    $conn=new mysqli("localhost", "", $dbname); 
+//the empty string is in place of the password, since we did not set one
+    $conn=new mysqli("localhost", "root", "", $dbname); 
 
 if ($conn->connect_error)
 {
