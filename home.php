@@ -1,3 +1,4 @@
+<!-- // path http://localhost/php_sql_messenger_app/home.php -->
 <html>
     <head>
         <title>Messenger</title>
