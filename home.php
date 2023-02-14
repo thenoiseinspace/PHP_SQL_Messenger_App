@@ -1,4 +1,7 @@
 <!-- // path http://localhost/php_sql_messenger_app/home.php -->
+<?php
+require("connection.php"); 
+?>
 <html>
     <head>
         <title>Messenger</title>
@@ -9,7 +12,24 @@
          <div id="userinfo">
         userinfo</div>
         <div id="msgscreen">
-            msgscreen
+            <?php
+         $sql = "SELECT * FROM message";  
+         $result=mysqli_query($conn, $sql); 
+         echo "<table border='1'>
+            <tr>
+                <th>username</th>
+                <th>message</th>
+            </tr>
+         ";
+         while($row=mysqli_fetch_array($result))
+         {
+            echo "<tr>";
+            echo "<td>".$row['username']."</td>"; 
+            echo "<td>".$row['content']."</td>"; 
+            echo "</tr>";
+         }
+         echo "</table>";
+            ?>
     </div>
     <div id="msgbox">
         <form method="post" action="send.php">
