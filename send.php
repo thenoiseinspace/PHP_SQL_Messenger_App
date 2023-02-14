@@ -1,7 +1,8 @@
 <?php
 require("connection.php"); 
+session_start();
 
-$username="xxx"; 
+$username=$_SESSION["username"]; 
 $msg=$_POST['message']; 
 $sql="INSERT INTO message(username, content) VALUES ('$username', '$msg' )"; 
 $result=mysqli_query($conn, $sql); 

@@ -1,6 +1,7 @@
 <!-- // path http://localhost/php_sql_messenger_app/home.php -->
 <?php
 require("connection.php"); 
+session_start();
 ?>
 <html>
     <head>
@@ -10,7 +11,11 @@ require("connection.php");
 <body>
     <div id="main_home">
          <div id="userinfo">
-        userinfo</div>
+        <?php
+            echo $_SESSION["username"];
+        ?>
+        <a href="Logout.php">Log out</a> 
+        </div>
         <div id="msgscreen">
             <?php
          $sql = "SELECT * FROM message";  
@@ -24,8 +29,8 @@ require("connection.php");
          while($row=mysqli_fetch_array($result))
          {
             echo "<tr>";
-            echo "<td>".$row['username']."</td>"; 
-            echo "<td>".$row['content']."</td>"; 
+            echo "<td style='font-size: 20px;'>".$row['username']."</td>"; 
+            echo "<td style='font-size: 23px; background-color:grey;'>".$row['content']."</td>"; 
             echo "</tr>";
          }
          echo "</table>";

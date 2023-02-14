@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require("connection.php"); 
 
 if(isset($_POST['login']))
@@ -14,6 +14,7 @@ if(isset($_POST['login']))
    $no=mysqli_num_rows($result); 
    if($no==1)
    {
+        $_SESSION["username"]=$username; 
         header("location:home.php?login=success"); 
    }
    else{
