@@ -1,7 +1,12 @@
 <!-- // path http://localhost/php_sql_messenger_app/home.php -->
 <?php
-require("connection.php"); 
 session_start();
+if(!isset($_SESSION["username"]))
+{
+    header("location:index.php");
+}
+require("connection.php"); 
+// session_start();
 ?>
 <html>
     <head>
