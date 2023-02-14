@@ -12,7 +12,7 @@
             msgscreen
     </div>
     <div id="msgbox">
-        <form method="post" action="#">
+        <form method="post" action="send.php">
             <textarea name="message" col="10" rows="4"></textarea>
             <button type="submit">Send</button>
 
