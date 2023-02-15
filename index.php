@@ -32,7 +32,7 @@ if(isset($_GET['login']))
 </div>
 
 <div id="footer">
-    All rights reserved. Copyright 2023.<?php echo date('Y');?>
+    All rights reserved. Copyright<?php echo date('Y');?>
 </div>
 </body>
 
