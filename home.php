@@ -21,10 +21,14 @@ require("connection.php");
 <body id="home_body">
     <div id="main_home">
          <div id="userinfo">
-        <?php
-            echo $_SESSION["username"];
-        ?>
-        <a href="Logout.php">Log out</a> 
+                <div id="display_user"> User: 
+                    <?php
+                        echo $_SESSION["username"];
+                    ?>
+                </div>
+                <div id="display_logout">
+                    <a href="Logout.php">Log out</a> 
+                </div>
         </div>
         <div>
         <h4 style="font-family: Audiowide; font-size: 40px; padding-top: 0px;">WHISPER</h4>
@@ -51,7 +55,7 @@ require("connection.php");
     </div>
     <div id="msgbox">
         <form method="post" action="send.php">
-            <textarea name="message" col="10" rows="4"></textarea>
+            <textarea name="message" style="width: 100%; border-radius: 5px;" rows="7">Type message...</textarea>
             <button type="submit">Send</button>
 
         </form>
