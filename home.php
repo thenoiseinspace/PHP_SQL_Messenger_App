@@ -11,7 +11,7 @@ require("connection.php");
 <html>
     <head>
         <title>Messenger</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 <body>
     <div id="main_home">

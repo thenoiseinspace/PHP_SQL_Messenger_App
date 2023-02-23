@@ -20,19 +20,28 @@ if(isset($_GET['login']))
 ?>
 </span>
 
-<table>
+<table class="table">
     <form method = "post" action="login.php">
 
     <input type="text" name="username" placeholder="Username"><br>
     <input type="password" name="password" placeholder="Password"><br>
-    <button type="submit" name="login">Log in</button>
+    <button type="submit" name="login" >Log in</button>
+
+    </form>
+</table>
+<table class="table">
+    <form method = "post" action="login.php">
+    <br>Not a member? Create an account. <br>
+    <input type="text" name="username" placeholder="Username"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <button class="index-button" type="submit" name="signup">Sign up</button>
 
     </form>
 </table>
 </div>
 
 <div id="footer">
-    All rights reserved. Copyright<?php echo date('Y');?>
+    All rights reserved. Copyright <?php echo date('Y');?>
 </div>
 </body>
 
