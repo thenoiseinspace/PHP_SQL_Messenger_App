@@ -11,15 +11,23 @@ require("connection.php");
 <html>
     <head>
         <title>Messenger</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu">
+        <style>
+        h1.a {font-family: "Audiowide", sans-serif;}
+        h1.b {font-family: "Ubuntu", sans-serif;}
+        </style>
     </head>
-<body>
+<body id="home_body">
     <div id="main_home">
          <div id="userinfo">
         <?php
             echo $_SESSION["username"];
         ?>
         <a href="Logout.php">Log out</a> 
+        </div>
+        <div>
+        <h4 style="font-family: Audiowide; font-size: 40px; padding-top: 0px;">WHISPER</h4>
         </div>
         <div id="msgscreen">
             <?php
