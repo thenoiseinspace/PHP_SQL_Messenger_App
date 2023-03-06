@@ -53,6 +53,38 @@ require("connection.php");
          echo "</table>";
             ?>
     </div>
+    <!-- This is the test section -->
+    <div id="msgscreen">
+            <?php
+         $sql = "SELECT * FROM message";  
+         $result=mysqli_query($conn, $sql); 
+         echo "<table border='1'>
+            <tr>
+                <th>username</th>
+                <th>message</th>
+            </tr>
+         ";
+         while($row=mysqli_fetch_array($result))
+         {
+
+            if ("username"=="$username"){
+                echo "<tr>";
+                echo "<td style='font-size: 20px;'>".$row['username']."</td>"; 
+                echo "<td style='font-size: 23px; background-color:blue;'>".$row['content']."</td>"; 
+                echo "</tr>";
+             }
+             else{
+                echo "<tr>";
+                echo "<td style='font-size: 20px;'>".$row['username']."</td>"; 
+                echo "<td style='font-size: 23px; background-color:red;'>".$row['content']."</td>"; 
+                echo "</tr>";
+             }
+         }
+         echo "</table>";
+            ?>
+    </div>
+    
+    <!-- end test section -->
     <div id="msgbox">
         <form method="post" action="send.php">
             <textarea name="message" style="width: 100%; border-radius: 5px;" rows="7">Type message...</textarea>
