@@ -56,7 +56,8 @@ require("connection.php");
     <!-- This is the test section -->
     <div id="msgscreen">
             <?php
-         $sql = "SELECT * FROM message";  
+        $username=isset($_SESSION["username"])?$_SESSION["username"]:"";
+        $sql = "SELECT * FROM message";  
          $result=mysqli_query($conn, $sql); 
          echo "<table border='1'>
             <tr>
@@ -67,16 +68,18 @@ require("connection.php");
          while($row=mysqli_fetch_array($result))
          {
 
-            if ("username"=="$username"){
+            if ($row['username']==$username){
                 echo "<tr>";
+                echo "<td> </td>";
+                echo "<td style='font-size: 23px; background-color:red;'>".$row['content']."</td>"; 
                 echo "<td style='font-size: 20px;'>".$row['username']."</td>"; 
-                echo "<td style='font-size: 23px; background-color:blue;'>".$row['content']."</td>"; 
                 echo "</tr>";
              }
              else{
                 echo "<tr>";
                 echo "<td style='font-size: 20px;'>".$row['username']."</td>"; 
-                echo "<td style='font-size: 23px; background-color:red;'>".$row['content']."</td>"; 
+                echo "<td style='font-size: 23px; background-color:rgba(0,212,255,1)'>".$row['content']."</td>"; 
+                echo "<td> </td>";
                 echo "</tr>";
              }
          }
