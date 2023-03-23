@@ -23,3 +23,24 @@ if(isset($_POST['signup']))
    mysqli_close($conn); 
 }
 ?>
+
+<!-- pulling this from second tutorial, Dani Krossing -->
+
+<?php
+   include_once 'header.php';
+?>
+
+<section class="signup-form">
+   <h2>Sign Up</h2>
+   <div class="signup-form-form">
+      <form action="signup.inc.php" method="post">
+         <!-- using post so sensitive data doesnt appear in url -->
+         <input type="text" name="name" placeholder="Full name">
+         <input type="text" name="email" placeholder="Email">
+         <input type="text" name="uid" placeholder="Username">
+         <input type="password" name="pwd" placeholder="Password">
+         <input type="password" name="pwdrepeat" placeholder="Retype password">
+         <button type="submit" name="submit">Sign up</button>
+      </form>
+   </div>
+</section> 
