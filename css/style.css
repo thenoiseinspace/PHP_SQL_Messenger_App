@@ -218,4 +218,11 @@ button:hover {
     }
   }
   
+/* /////////////////
+//Sign up page//
+///////////////// */
 
+.signup-form-form{
+  margin: 8px 0; 
+  padding: 12px 20px;
+}
